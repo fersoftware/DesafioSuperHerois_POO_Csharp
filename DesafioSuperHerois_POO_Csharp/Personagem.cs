@@ -115,12 +115,14 @@ namespace DesafioSuperHerois_POO_Csharp
             }
             else
             {
+                Console.WriteLine();
                 Console.WriteLine("Atacante não tem PE suficiente");
                 Console.WriteLine("{0} está esgotado! Usou este turno para se recuperar!", this.Nome);
+                Console.WriteLine();
                 Recuperar();
             }
 
-            Console.WriteLine("{0} usou seu poder {1} em {2}. \t Dano causado: {3}", this.Nome.ToUpper(), poderes[randomNumber].Nome.ToUpper(), oponente.Nome, poderes[randomNumber].Dano);
+            Console.WriteLine("{0,15} usou seu poder {1,15} em {2,15}. Dano causado: {3}", this.Nome.ToUpper(), poderes[randomNumber].Nome.ToUpper(), oponente.Nome.ToUpper(), poderes[randomNumber].Dano);
         }
     }
 }

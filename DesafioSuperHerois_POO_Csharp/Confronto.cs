@@ -30,9 +30,7 @@ namespace DesafioSuperHerois_POO_Csharp
             else
             { Console.WriteLine("Confronto Vilão contra Vilão!"); }
             Console.WriteLine();
-            Console.WriteLine("{0} - Pf({1})", oponente1.Nome, oponente1.Pf);
-            Console.WriteLine("\tVERSUS");
-            Console.WriteLine("{0} - Pf({1})", oponente2.Nome, oponente2.Pf);
+            Console.WriteLine("{0} - Pf({1}) \t\tVERSUS\t\t {2} - Pf({3})", oponente1.Nome, oponente1.Pf, oponente2.Nome, oponente2.Pf);
             Console.WriteLine();
             Random rnd = new Random();
             while (oponente1.Pf > 0 && oponente2.Pf > 0)
@@ -48,12 +46,14 @@ namespace DesafioSuperHerois_POO_Csharp
 
             if (oponente1.Pf > oponente2.Pf)
             {
+                Console.WriteLine();
                 Console.WriteLine("Combate encerrado: vencedor : {0} - Pf({1})", oponente1.Nome, oponente1.Pf);
                 Console.WriteLine("Combate encerrado: perdedor : {0} - Pf({1})", oponente2.Nome, oponente2.Pf);
                 if (oponente1.Drenador) oponente1.Drenar(oponente2);
             }
             else
             {
+                Console.WriteLine();
                 Console.WriteLine("Combate encerrado: vencedor : {0} - Pf({1})", oponente2.Nome, oponente2.Pf);
                 Console.WriteLine("Combate encerrado: perdedor : {0} - Pf({1})", oponente1.Nome, oponente1.Pf);
                 if (oponente2.Drenador) oponente2.Drenar(oponente1);
