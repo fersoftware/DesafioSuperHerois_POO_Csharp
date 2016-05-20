@@ -103,24 +103,24 @@ namespace DesafioSuperHerois_POO_Csharp
             this.Pe = this.PeInicial;
         }
 
+        Random random = new Random();
         public void Atacar(Personagem oponente)
-        {
-            Random random = new Random();
+        {            
             int randomNumber = random.Next(0, poderes.Count);
 
             if (this.Pe >= poderes[randomNumber].Pe)
             {
                 this.Pe -= poderes[randomNumber].Pe;
-                this.Pf -= poderes[randomNumber].Dano;
+                oponente.Pf -= poderes[randomNumber].Dano;
             }
             else
             {
                 Console.WriteLine("Atacante não tem PE suficiente");
-                Console.WriteLine("[NOME DO ATACANTE] está esgotado! Usou este turno para se recuperar!", this.Nome);
+                Console.WriteLine("{0} está esgotado! Usou este turno para se recuperar!", this.Nome);
                 Recuperar();
             }
 
-            Console.WriteLine("{0} usou seu poder {1} em{2}. /t Dano causado: {3}", this.Nome.ToUpper(), poderes[randomNumber].Nome.ToUpper(), oponente.Nome, poderes[randomNumber].Dano);
+            Console.WriteLine("{0} usou seu poder {1} em {2}. \t Dano causado: {3}", this.Nome.ToUpper(), poderes[randomNumber].Nome.ToUpper(), oponente.Nome, poderes[randomNumber].Dano);
         }
     }
 }
