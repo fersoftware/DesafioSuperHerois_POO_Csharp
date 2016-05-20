@@ -23,17 +23,17 @@ namespace DesafioSuperHerois_POO_Csharp
             else
             { Console.WriteLine("Confronto {0}", oponente1.Editora.ToUpper()); }
 
-            if (oponente1.Nome.GetType().ToString() == "Heroi" && oponente2.Nome.GetType().ToString() == "Vilao")
+            if (oponente1.GetType().ToString().IndexOf("Heroi") >= 0 && oponente2.GetType().ToString().IndexOf("Vilao") >= 0)
             { Console.WriteLine("Confronto Clássico: Bem versus o Mal!"); }
-            else if (oponente1.Nome.GetType().ToString() == "Heroi" && oponente2.Nome.GetType().ToString() == "Heroi")
+            else if (oponente1.GetType().ToString().IndexOf("Heroi") >= 0 && oponente2.GetType().ToString().IndexOf("Heroi") >= 0)
             { Console.WriteLine("Confronto Herói contra Herói!"); }
             else
             { Console.WriteLine("Confronto Vilão contra Vilão!"); }
-
+            Console.WriteLine();
             Console.WriteLine("{0} - Pf({1})", oponente1.Nome, oponente1.Pf);
-            Console.WriteLine("/tVERSUS");
+            Console.WriteLine("\tVERSUS");
             Console.WriteLine("{0} - Pf({1})", oponente2.Nome, oponente2.Pf);
-
+            Console.WriteLine();
             if (oponente1.Pf > 0 && oponente2.Pf > 0)
             {
                 Random random = new Random();
