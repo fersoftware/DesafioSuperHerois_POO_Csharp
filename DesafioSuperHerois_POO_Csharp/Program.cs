@@ -9,8 +9,10 @@ namespace DesafioSuperHerois_POO_Csharp
     class Program
     {
         static void Main(string[] args)
-        {
-            Confronto.Confrontar(Superman(), Superbizarro());            
+        {           
+            //Confronto.Confrontar(Superman(), Superbizarro());
+            //Confronto.Confrontar(Mimico(), Parasita());
+            Confronto.Confrontar(Mimico(), Superman());
         }
 
         static Heroi Superman()

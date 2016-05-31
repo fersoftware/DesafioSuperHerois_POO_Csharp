@@ -22,7 +22,7 @@ namespace DesafioSuperHerois_POO_Csharp
             this.pf = pf;
             this.pe = pe;
             this.mimico = mimico;
-            this.drenador = drenador;            
+            this.drenador = drenador;                       
         }
 
         public string Nome
